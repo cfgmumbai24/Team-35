@@ -10,6 +10,13 @@ import json
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "*"
+    ]
+)
+
 @app.post('/chat_text')
 async def chat_text(message: str = Form(...), language: str = Form(...)):
     try: 
@@ -25,10 +32,11 @@ async def chat_text(message: str = Form(...), language: str = Form(...)):
     except Exception as e:
         return JSONResponse(content={"message": "Error in running chat_text", "success": False}, status_code=500)
     
-
-@app.post('/prefetch_login')
-async def prefetch_login(language: str = Form(...)):
+# language: str = Form(...)
+@app.get('/prefetch_login')
+async def prefetch_login():
     try:
+        language = "Hindi"
         f = open('static_data.json')
         print(f)
         data = json.load(f)
