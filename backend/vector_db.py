@@ -107,8 +107,12 @@ from google.generativeai import GenerationConfig, GenerativeModel
 import os
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import chunking
+from dotenv import load_dotenv
 
-gemini_key = ""
+# gemini_key = ""
+
+gemini_key = load_dotenv("GEMINI_API_KEY")
+
 genai.configure(api_key=gemini_key)
 
 class GeminiEmbeddingFunction(EmbeddingFunction):
