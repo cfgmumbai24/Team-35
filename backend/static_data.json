@@ -1,0 +1,44 @@
+{
+    "videos": [
+        {
+            "id": 1,
+            "title": "Student Loan",
+            "link": "https://example.com/student-loan",
+            "steps": "Step 1: Apply online.\nStep 2: Get approval.\nStep 3: Receive funds.",
+            "extLinks": "https://example.com/student-loan-details"
+        },
+        {
+            "id": 2,
+            "title": "Student Loan",
+            "link": "https://example.com/student-loan",
+            "steps": "Step 1: Apply online.\nStep 2: Get approval.\nStep 3: Receive funds.",
+            "extLinks": "https://example.com/student-loan-details"
+        },
+        {
+            "id": 3,
+            "title": "Student Loan",
+            "link": "https://example.com/student-loan",
+            "steps": "Step 1: Apply online.\nStep 2: Get approval.\nStep 3: Receive funds.",
+            "extLinks": "https://example.com/student-loan-details"
+        },
+        {
+            "id": 4,
+            "title": "Student Loan",
+            "link": "https://example.com/student-loan",
+            "steps": "Step 1: Apply online.\nStep 2: Get approval.\nStep 3: Receive funds.",
+            "extLinks": "https://example.com/student-loan-details"
+        }
+    ],
+    "qa": [
+        {
+            "id": 1,
+            "question": "Question A?",
+            "answer": "Answer to Question A"
+        },
+        {
+            "id": 2,
+            "question": "Question B?",
+            "answer": "Answer to Question B"
+        }
+    ]
+}
