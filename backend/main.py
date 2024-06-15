@@ -94,7 +94,7 @@ async def create_user(user: UserCreate):
     created_user = await insert_user(user_dict)
     return created_user
 
-@app.get("/login")
+@app.post("/login")
 async def login(phone_number: str = Query(...), password: str = Query(...)):
     db_user = await user_collection.find_one({"phone_number": phone_number})
     if db_user and await verify_password(password, db_user['hashed_password']):
@@ -111,3 +111,7 @@ async def read_user(user_id: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+
+
+# http request, post and get could be together
