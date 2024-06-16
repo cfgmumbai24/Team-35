@@ -61,6 +61,8 @@ def make_prompt(ques, knowledge):
     Take the user's concern seriously and provide a solution for the finance issues or queries. Make sure to provide the actual solution and not a reference for the solution. You have a knowledge base, search for an answer based on it. Check the semantics of each sentence in order to provide a logical solution.\n
     The answer should be satisfied with optimal solution and try to avoid giving out "Sorry, the provided question is out of scope."\n
     Try to provide an explanation to the question in very basic and layman language. Also try to keep the answer short and sweet.\n
+    Provide with some answer from the knowledge base in layman terms rather than saying "Sorry, the provided question is out of scope.", dont do that\n
+    Try to mention in little more detail\n
     """
 
     gen_config = GenerationConfig(temperature=0.1)
@@ -69,7 +71,7 @@ def make_prompt(ques, knowledge):
     return answer
 
 async def chatbot_response(ques, db):
-    passages = get_relevant_passages(ques, db, n_results=14)
+    passages = get_relevant_passages(ques, db, n_results=15)
     txt = ""
     for passage in passages:
         txt += passage

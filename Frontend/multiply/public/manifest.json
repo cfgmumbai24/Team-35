@@ -1,0 +1,21 @@
+{
+    "name": "My App",
+    "short_name": "App",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "This is a sample manifest file for a web application.",
+    "icons": [
+      {
+        "src": "icon/lowres.webp",
+        "sizes": "48x48",
+        "type": "image/webp"
+      },
+      {
+        "src": "icon/lowres",
+        "sizes": "48x48"
+      }
+    ]
+  }
+  
